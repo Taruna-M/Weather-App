@@ -14,7 +14,7 @@ A simple and responsive weather forecasting web application that allows users to
 - **HTML5**: Markup language for structuring the content of the app.
 - **CSS3**: Styling language for designing the app, with Tailwind CSS for utility-first styling.
 - **JavaScript**: Client-side scripting for dynamic behavior.
-- **OpenWeather API**: API used to fetch real-time weather data and forecast information.
+- **WeatherAPI**: API used to fetch real-time weather data and forecast information.
 - **Geolocation API**: Used to fetch the user's current location.
 
 
