@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-blue-50 min-h-screen">
+    <div class="container mx-auto p-4">
+        <!-- App Title -->
+        <h1 class="text-3xl font-bold text-center mb-6">Weather Forecast App</h1>
+
+        <!-- Search Form -->
+        <div class="flex justify-center mb-6">
+            <input id="cityInput" type="text" placeholder="Enter city name" class="border rounded-md p-2 w-2/3 lg:w-1/3"/>
+            <button id="searchBtn" class="bg-blue-600 text-white rounded-md px-4 py-2 ml-2 hover:bg-blue-700">
+                Search
+            </button>
+        </div>
+
+        <!-- Use Current Location Button -->
+        <div class="flex justify-center mb-6">
+            <button id="currentLocationBtn" class="bg-green-600 text-white rounded-md px-4 py-2 hover:bg-green-700">
+                Use Current Location
+            </button>
+        </div>
+
+        <!-- Weather Information -->
+        <div id="weatherContainer" class="text-center hidden">
+            <h2 id="cityName" class="text-2xl font-semibold mb-4"></h2>
+            <div class="flex justify-center items-center">
+                <img id="weatherIcon" class="w-16 h-16" src="" alt="Weather Icon" />
+                <p id="weatherCondition" class="text-lg ml-4"></p>
+            </div>
+            <p id="temperature" class="text-xl mt-4"></p>
+            <p id="humidity" class="text-lg mt-2"></p>
+            <p id="windSpeed" class="text-lg mt-2"></p>
+        </div>
+
+        <!-- 5-Day Forecast -->
+        <div id="forecastContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 hidden">
+            <!-- Day 1 -->
+            <div class="forecast-item bg-white shadow-lg rounded-lg p-4 text-center">
+                <h3 id="day1Date" class="font-semibold text-xl mb-2"></h3>
+                <img id="day1Icon" class="w-16 h-16 mx-auto" src="" alt="Day 1 Weather Icon" />
+                <p id="day1Temp" class="text-lg mt-2"></p>
+                <p id="day1Condition" class="text-md mt-2"></p>
+                <p id="day1Wind" class="text-sm mt-2"></p>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="forecast-item bg-white shadow-lg rounded-lg p-4 text-center">
+                <h3 id="day2Date" class="font-semibold text-xl mb-2"></h3>
+                <img id="day2Icon" class="w-16 h-16 mx-auto" src="" alt="Day 2 Weather Icon" />
+                <p id="day2Temp" class="text-lg mt-2"></p>
+                <p id="day2Condition" class="text-md mt-2"></p>
+                <p id="day2Wind" class="text-sm mt-2"></p>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="forecast-item bg-white shadow-lg rounded-lg p-4 text-center">
+                <h3 id="day3Date" class="font-semibold text-xl mb-2"></h3>
+                <img id="day3Icon" class="w-16 h-16 mx-auto" src="" alt="Day 3 Weather Icon" />
+                <p id="day3Temp" class="text-lg mt-2"></p>
+                <p id="day3Condition" class="text-md mt-2"></p>
+                <p id="day3Wind" class="text-sm mt-2"></p>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="forecast-item bg-white shadow-lg rounded-lg p-4 text-center">
+                <h3 id="day4Date" class="font-semibold text-xl mb-2"></h3>
+                <img id="day4Icon" class="w-16 h-16 mx-auto" src="" alt="Day 4 Weather Icon" />
+                <p id="day4Temp" class="text-lg mt-2"></p>
+                <p id="day4Condition" class="text-md mt-2"></p>
+                <p id="day4Wind" class="text-sm mt-2"></p>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="forecast-item bg-white shadow-lg rounded-lg p-4 text-center">
+                <h3 id="day5Date" class="font-semibold text-xl mb-2"></h3>
+                <img id="day5Icon" class="w-16 h-16 mx-auto" src="" alt="Day 5 Weather Icon" />
+                <p id="day5Temp" class="text-lg mt-2"></p>
+                <p id="day5Condition" class="text-md mt-2"></p>
+                <p id="day5Wind" class="text-sm mt-2"></p>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="text-red-600 text-center hidden mt-4"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="./app.js"></script>
+</body>
+</html>
